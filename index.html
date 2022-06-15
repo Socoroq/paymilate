@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ? fa -->
+    <link rel="stylesheet" href="fonts/fa/css/font-awesome.min.css" />
+    <!-- ? styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Paymilate</title>
+</head>
+
+<body>
+    <!-- ? page wrapper -->
+    <div class="wrapper min-vh-100 p-3 d-flex flex-column align-items-center justify-content-center">
+        <div class="container-fluid page-container" id="page-container">
+            <div class="row">
+                <div class="page-header mb-2 px-3 d-flex align-items-center d-xxl-none d-xxl-none d-lg-none">
+                    <div class="bg-white border rounded shadow-sm w-100 py-3 px-3 d-flex align-items-center justify-content-between">
+                        <button type="button" class="btn btn-secondary" id="showNav">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </button>
+                        <!-- <div class="w-50">
+                            <img src="img/customcolor_logo.png" alt="Logo" class="img-fluid">
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- nav start -->
+                <nav class="col-12 col-xxl-2 col-xl-2 col-lg-3 col-md-0 py-3 px-4 shadow-sm border rounded nav-panel nav flex-column nav-panel"
+                    id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <div class="w-100 py-4">
+                        <img src="img/customcolor_logo.png" alt="Logo" class="img-fluid">
+                    </div>
+                    <button class="btn btn-nav text-start py-2 px-3 my-3 d-block d-xxl-none d-xl-none d-lg-none"
+                        id="closeNav">Закрыть <i class="fa fa-times" aria-hidden="true"></i></button>
+
+                    <button class="btn btn-nav text-start py-2 px-3 mb-3 active" id="bp-tab" data-tab-trigger="red" data-bs-toggle="pill"
+                        data-bs-target="#bp-panel" type="button" role="tab" aria-controls="bp-panel"
+                        aria-selected="true">Бизнес профиль</button>
+
+                    <button class="btn btn-nav text-start py-2 px-3 mb-3" id="api-tab" data-tab-trigger="blue" data-bs-toggle="pill"
+                        data-bs-target="#api-panel" type="button" role="tab" aria-controls="api-panel"
+                        aria-selected="false">API ключи</button>
+
+                    <button class="btn btn-nav text-start py-2 px-3 mb-3" id="chech-tab" data-tab-trigger="yello" data-bs-toggle="pill"
+                        data-bs-target="#check-panel" type="button" role="tab" aria-controls="check-panel"
+                        aria-selected="false">Мои счета</button>
+
+                    <button class="btn btn-nav text-start py-2 px-3 mb-3" id="payments-tab" data-tab-trigger="purple" data-bs-toggle="pill"
+                        data-bs-target="#payments-panel" type="button" role="tab" aria-controls="payments-panel"
+                        aria-selected="false">Платежи</button>
+
+                    <button class="btn btn-nav text-start py-2 px-3 mb-3" id="referals-tab" data-tab-trigger="green" data-bs-toggle="pill"
+                        data-bs-target="#referals-panel" type="button" role="tab" aria-controls="pay-panel"
+                        aria-selected="false">Рефералы</button>
+
+                    <button class="btn btn-nav text-start py-2 px-3 mb-3" id="pay-tab" data-tab-trigger="dark" data-bs-toggle="pill"
+                        data-bs-target="#pay-panel" type="button" role="tab" aria-controls="bp-panel"
+                        aria-selected="false">Создать платеж</button>
+
+                    <button class="btn btn-nav text-start py-2 px-3 mb-3" id="profil-tab" data-tab-trigger="grey" data-bs-toggle="pill"
+                        data-bs-target="#profil-panel" type="button" role="tab" aria-controls="profil-panel"
+                        aria-selected="false">Профиль</button>
+
+                    <button class="btn btn-nav text-start py-2 px-3 mb-3" id="statistics-tab" data-tab-trigger="orange" data-bs-toggle="pill"
+                        data-bs-target="#statistics-panel" type="button" role="tab" aria-controls="statistics-panel"
+                        aria-selected="false">Статистика</button>
+
+                    <button type="button"
+                        class="btn btn-nav text-start py-2 px-3 mb-3 btn-disabled">Документация</button>
+
+                    <button type="button" class="btn btn-nav text-start py-2 px-3 mb-3 btn-disabled">Инфоконал</button>
+
+                    <button type="button" class="btn btn-nav text-start py-2 px-3 mb-3 btn-disabled">Тех
+                        поддержка</button>
+
+                    <button class="btn btn-nav text-start py-2 px-3 btn-disabled" id="check-tab">Выход</button>
+
+                </nav>
+                <!-- nav end -->
+
+                <!-- content start -->
+                <div class="col-12 col-xxl-10 col-xl-10 col-lg-9 col-md-12 px-3 content">
+                    <!-- bisnes profile start -->
+                    <section class="p-4 shadow-sm border rounded align-items-start justify-content-center section bp fade show active"
+                        id="bp-panel" role="tabpanel" aria-labelledby="bp-panel" data-tab="red">
+                        <form action="" method="" class="w-100">
+                            <div class="row d-flex justify-content-center">
+
+                                <div
+                                    class="col-12 col-xxl-10 col-xl-10 col-lg-10 mb-5 d-flex justify-content-between flex-wrap">
+                                    <h4 class="h4">Данные бизнес профиля</h3>
+                                        <button type="button" class="btn btn-secondary" id="bp--edit"></button>
+                                </div>
+
+                                <div class="col-12 col-xxl-5 col-xl-5 col-lg-5 mb-4">
+                                    <span>ID</span>
+                                    <div class="d-flex align-items-center justify-content-center bp__input-group-off">
+                                        <input type="text" name="" class="bp__input-off mt-2" value="0001" disabled>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-xxl-5 col-xl-5 col-lg-5 mb-4">
+                                    <span>Компания</span>
+                                    <div class="d-flex align-items-center justify-content-center bp__input-group">
+                                        <input type="text" name="" class="bp__input mt-2 bp--item"
+                                            placeholder="ООО Компания" disabled />
+                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-xxl-5 col-xl-5 col-lg-5 mb-4">
+                                    <span>Контактное лицо</span>
+                                    <div class="d-flex align-items-center justify-content-center bp__input-group">
+                                        <input type="text" name="" class="bp__input mt-2 bp--item" placeholder="ФИО"
+                                            disabled />
+                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-xxl-5 col-xl-5 col-lg-5 mb-4">
+                                    <span>Реквизиты компании</span>
+                                    <div class="d-flex align-items-center justify-content-center bp__input-group">
+                                        <input type="text" name="" class="bp__input mt-2 bp--item"
+                                            placeholder="Реквизиты" disabled />
+                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-xxl-5 col-xl-5 col-lg-5 mb-4">
+                                    <span>Эл.почта</span>
+                                    <div class="d-flex align-items-center justify-content-center bp__input-group">
+                                        <input type="email" name="" class="bp__input mt-2 bp--item"
+                                            placeholder="@example.com" disabled />
+                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-xxl-5 col-xl-5 col-lg-5 mb-4">
+                                    <span>Телефон</span>
+                                    <div class="d-flex align-items-center justify-content-center bp__input-group">
+                                        <input type="tel" name="" class="bp__input mt-2 bp--item"
+                                            placeholder="8-777-000-000" disabled />
+                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-xxl-5 col-xl-5 col-lg-5 mb-4">
+                                    <span>URL Success</span>
+                                    <div class="d-flex align-items-center justify-content-center bp__input-group">
+                                        <input type="url" name="" class="bp__input mt-2 bp--item"
+                                            placeholder="https://example.com" disabled />
+                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-xxl-5 col-xl-5 col-lg-5 mb-5">
+                                    <span>URL Fail</span>
+                                    <div class="d-flex align-items-center justify-content-center bp__input-group">
+                                        <input type="url" name="" class="bp__input mt-2 bp--item"
+                                            placeholder="https://example.com" disabled />
+                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-xxl-15col-xl-5 col-lg-5 mb-4">
+                                    <!-- col name -->
+                                    <span>Логотип формы</span>
+
+                                    <!-- bp--logo -->
+                                    <div class="bp__logo mt-3">
+                                        <img src="img/customcolor_logo.png" alt="Logo" class="img-fluid"
+                                            id="preview-img">
+                                    </div>
+                                    <!-- label for input file -->
+
+                                    <div class="bp__input-group border-0">
+                                        <label for="bp--file" class="shadow-sm input-file bp--file mt-2"
+                                            id="bp--file--label">
+                                            <span class="input-file__text">Выберите файл</span>
+                                            <span class="input-file__value" id="bp--file--value">Файл не выбран</span>
+                                            <input type="file" id="bp--file" class="d-none bp--item" accept="image/*"
+                                                disabled>
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12 col-xxl-5 col-xl-5 col-lg-5 mb-4 d-flex align-items-end">
+                                    <div class="bp__input-group border-0 w-100">
+                                        <button type="submit" class="btn btn-primary w-100 bp--item" id="bp-submit"
+                                            disabled>Сохранить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                    <!-- bisnes profile end -->
+
+                    <!-- API profile start -->
+                    <section class="p-4 shadow-sm border rounded section api fade" id="api-panel" role="tabpanel"
+                        aria-labelledby="api-panel" data-tab="red">
+                        <ul class="api__list h-100">
+                            <li class="mt-4 mb-4">
+                                <h3 class="h3">API ключи</h3>
+                            </li>
+
+                            <li class="mt-4 api__li">
+                                <span>API key</span>
+                                <span class="ms-2"></span>
+                            </li>
+
+                            <li class="mt-4 api__li">
+                                <span>API login</span>
+                                <span class="ms-2"></span>
+                            </li>
+
+                            <li class="mt-4 api__li">
+                                <span>API password</span>
+                                <span class="ms-2"></span>
+                            </li>
+
+                            <li class="mt-4 api__li">
+                                <span>API URL</span>
+                                <span class="ms-2"></span>
+                            </li>
+
+                            <li class="mt-5 api__li">
+                                <button type="button" class="btn btn-primary w-100">
+                                    Сгенерировать
+                                </button>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- API profile end -->
+
+                    <!-- checks start -->
+                    <section class="p-4 shadow-sm border rounded section checks flex-column fade" id="check-panel" data-tab="red">
+
+                        <div class="p-3 border-bottom w-100">
+                            <h3 class="h3">Список счетов</h3>
+                        </div>
+
+                        <div class="row checks__items h-100 mt-3">
+
+                            <div class="col-12 col-xxl-4 col-xl-4 col-lg-6">
+                                <div class="p-3 rounded shadow-sm checks__item">
+                                    <div class="checks__item-title">
+                                        <span class="circle bg-success me-3"></span>
+                                        <span>000121488</span>
+                                    </div>
+                                    <div class="checks__item-subtitle">
+                                        <span>10cLee6c-049f-4c69-a244-c0fbb85a921a.</span>
+                                    </div>
+                                    <div class="checks__item-name">
+                                        <span>example company</span>
+                                    </div>
+                                    <div class="checks__item-sum">
+                                        <span class="me-2"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+                                        <span class="me-2">125000</span>
+                                        <span>RUB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-xxl-4 col-xl-4 col-lg-6">
+                                <div class="p-3 rounded shadow-sm checks__item">
+                                    <div class="checks__item-title">
+                                        <span class="circle bg-success me-3"></span>
+                                        <span>000121488</span>
+                                    </div>
+                                    <div class="checks__item-subtitle">
+                                        <span>10cLee6c-049f-4c69-a244-c0fbb85a921a.</span>
+                                    </div>
+                                    <div class="checks__item-name">
+                                        <span>example company</span>
+                                    </div>
+                                    <div class="checks__item-sum">
+                                        <span class="me-2"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+                                        <span class="me-2">125000</span>
+                                        <span>RUB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-xxl-4 col-xl-4 col-lg-6">
+                                <div class="p-3 rounded shadow-sm checks__item">
+                                    <div class="checks__item-title">
+                                        <span class="circle bg-success me-3"></span>
+                                        <span>000121488</span>
+                                    </div>
+                                    <div class="checks__item-subtitle">
+                                        <span>10cLee6c-049f-4c69-a244-c0fbb85a921a.</span>
+                                    </div>
+                                    <div class="checks__item-name">
+                                        <span>example company</span>
+                                    </div>
+                                    <div class="checks__item-sum">
+                                        <span class="me-2"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+                                        <span class="me-2">125000</span>
+                                        <span>RUB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-xxl-4 col-xl-4 col-lg-6">
+                                <div class="p-3 rounded shadow-sm checks__item">
+                                    <div class="checks__item-title">
+                                        <span class="circle bg-success me-3"></span>
+                                        <span>000121488</span>
+                                    </div>
+                                    <div class="checks__item-subtitle">
+                                        <span>10cLee6c-049f-4c69-a244-c0fbb85a921a.</span>
+                                    </div>
+                                    <div class="checks__item-name">
+                                        <span>example company</span>
+                                    </div>
+                                    <div class="checks__item-sum">
+                                        <span class="me-2"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+                                        <span class="me-2">125000</span>
+                                        <span>RUB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-xxl-4 col-xl-4 col-lg-6">
+                                <div class="p-3 rounded shadow-sm checks__item">
+                                    <div class="checks__item-title">
+                                        <span class="circle bg-success me-3"></span>
+                                        <span>000121488</span>
+                                    </div>
+                                    <div class="checks__item-subtitle">
+                                        <span>10cLee6c-049f-4c69-a244-c0fbb85a921a.</span>
+                                    </div>
+                                    <div class="checks__item-name">
+                                        <span>example company</span>
+                                    </div>
+                                    <div class="checks__item-sum">
+                                        <span class="me-2"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+                                        <span class="me-2">125000</span>
+                                        <span>RUB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-xxl-4 col-xl-4 col-lg-6">
+                                <div class="p-3 rounded shadow-sm checks__item">
+                                    <div class="checks__item-title">
+                                        <span class="circle bg-success me-3"></span>
+                                        <span>000121488</span>
+                                    </div>
+                                    <div class="checks__item-subtitle">
+                                        <span>10cLee6c-049f-4c69-a244-c0fbb85a921a.</span>
+                                    </div>
+                                    <div class="checks__item-name">
+                                        <span>example company</span>
+                                    </div>
+                                    <div class="checks__item-sum">
+                                        <span class="me-2"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+                                        <span class="me-2">125000</span>
+                                        <span>RUB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-xxl-4 col-xl-4 col-lg-6">
+                                <div class="p-3 rounded shadow-sm checks__item">
+                                    <div class="checks__item-title">
+                                        <span class="circle bg-success me-3"></span>
+                                        <span>000121488</span>
+                                    </div>
+                                    <div class="checks__item-subtitle">
+                                        <span>10cLee6c-049f-4c69-a244-c0fbb85a921a.</span>
+                                    </div>
+                                    <div class="checks__item-name">
+                                        <span>example company</span>
+                                    </div>
+                                    <div class="checks__item-sum">
+                                        <span class="me-2"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+                                        <span class="me-2">125000</span>
+                                        <span>RUB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-xxl-4 col-xl-4 col-lg-6">
+                                <div class="p-3 rounded shadow-sm checks__item">
+                                    <div class="checks__item-title">
+                                        <span class="circle bg-success me-3"></span>
+                                        <span>000121488</span>
+                                    </div>
+                                    <div class="checks__item-subtitle">
+                                        <span>10cLee6c-049f-4c69-a244-c0fbb85a921a.</span>
+                                    </div>
+                                    <div class="checks__item-name">
+                                        <span>example company</span>
+                                    </div>
+                                    <div class="checks__item-sum">
+                                        <span class="me-2"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+                                        <span class="me-2">125000</span>
+                                        <span>RUB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-xxl-4 col-xl-4 col-lg-6">
+                                <div class="p-3 rounded shadow-sm checks__item">
+                                    <div class="checks__item-title">
+                                        <span class="circle bg-success me-3"></span>
+                                        <span>000121488</span>
+                                    </div>
+                                    <div class="checks__item-subtitle">
+                                        <span>10cLee6c-049f-4c69-a244-c0fbb85a921a.</span>
+                                    </div>
+                                    <div class="checks__item-name">
+                                        <span>example company</span>
+                                    </div>
+                                    <div class="checks__item-sum">
+                                        <span class="me-2"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+                                        <span class="me-2">125000</span>
+                                        <span>RUB</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="checks__footer border-top w-100 py-4 mt-3 d-flex align-items-center justify-content-center">
+                            <span class="mx-1">1-9</span>
+                            <span class="mx-1">из</span>
+                            <span class="mx-1">9</span>
+                            <span class="mx-1">записей</span>
+                        </div>
+
+                    </section>
+                    <!-- checks end -->
+
+                    <!-- payments start  -->
+                    <section class="p-4 shadow-sm border rounded section payments flex-column fade" id="payments-panel" data-tab="yellow">
+
+                        <!-- ? start payments header -->
+                        <div class="payments__header w-100 border-bottom d-flex align-items-center">
+                            <h3 class="h3">Список платежей</h3>
+                        </div>
+                        <!-- ? end payments header -->
+
+                        <!-- ? start payments filter -->
+                        <div class="payments__filter w-100 py-3 mt-2 filter border-bottom">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Показать
+                                фильтры
+                            </button>
+
+                            <button type="button" class="btn btn-primary ms-3">Экспорт</button>
+
+                            <div class="offcanvas offcanvas-end border" tabindex="-1" id="offcanvasRight"
+                                aria-labelledby="offcanvasRightLabel">
+                                <!-- ? canvas - header -->
+                                <div class="offcanvas-header py-3 border-bottom">
+                                    <h4 class="h4" id="offcanvasRightLabel">Фильтры</h4>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <!-- ? canvas - body -->
+                                <div class="offcanvas-body">
+                                    <form action="" method="" class="filter__form" id="filter-convas">
+                                        <!-- ? start filters -->
+                                        <div class="dropdown mt-4" id="dropdown-check-1">
+                                            <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                role="button" id="dropdownMenuLink-1" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Все счета
+                                            </button>
+                                            <ul class="dropdown-menu border rounded shadow-sm">
+                                                <li class="dropdown-item">
+                                                    <label for="check-0" class="check-label">Все счета</label>
+                                                    <input type="radio" name="check" id="check-0" value="0"
+                                                        class="d-none" checked>
+                                                </li>
+
+                                                <li class="dropdown-item">
+                                                    <label for="check-1" class="check-label">Счет 1</label>
+                                                    <input type="radio" name="check" id="check-1" value="1"
+                                                        class="d-none">
+                                                </li>
+
+                                                <li class="dropdown-item">
+                                                    <label for="check-2" class="check-label">Счет 2</label>
+                                                    <input type="radio" name="check" id="check-2" value="2"
+                                                        class="d-none">
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="dropdown mt-4" id="dropdown-type">
+                                            <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                role="button" id="dropdownMenuLink-2" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Все типы платежей
+                                            </button>
+                                            <ul class="dropdown-menu border rounded shadow-sm">
+                                                <li class="dropdown-item">
+                                                    <label for="type-0" class="check-label">Все типы платежей</label>
+                                                    <input type="radio" name="type" id="type-0" value="0" class="d-none"
+                                                        checked>
+                                                </li>
+
+                                                <li class="dropdown-item">
+                                                    <label for="type-1" class="check-label">Внешние исходящие</label>
+                                                    <input type="radio" name="type" id="type-1" value="1"
+                                                        class="d-none">
+                                                </li>
+
+                                                <li class="dropdown-item">
+                                                    <label for="type-2" class="check-label">Внешние исходящие</label>
+                                                    <input type="radio" name="type" id="type-2" value="2"
+                                                        class="d-none">
+                                                </li>
+
+                                                <li class="dropdown-item">
+                                                    <label for="type-3" class="check-label">Внешние входящие</label>
+                                                    <input type="radio" name="type" id="type-3" value="3"
+                                                        class="d-none">
+                                                </li>
+
+                                                <li class="dropdown-item">
+                                                    <label for="type-4" class="check-label">Внутренние входящие</label>
+                                                    <input type="radio" name="type" id="type-4" value="4"
+                                                        class="d-none">
+                                                </li>
+
+                                                <li class="dropdown-item">
+                                                    <label for="type-5" class="check-label">Внутренние исходящие</label>
+                                                    <input type="radio" name="type" id="type-5" value="5"
+                                                        class="d-none">
+                                                </li>
+
+                                                <li class="dropdown-item">
+                                                    <label for="type-6" class="check-label">Между своими счетами</label>
+                                                    <input type="radio" name="type" id="type-6" value="6"
+                                                        class="d-none">
+                                                </li>
+
+                                                <li class="dropdown-item">
+                                                    <label for="type-7" class="check-label">Обменные операции</label>
+                                                    <input type="radio" name="type" id="type-7" value="7"
+                                                        class="d-none">
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="form-group mt-4">
+                                            <span>Дата с</span>
+                                            <input type="date" name="" class="form-control mt-2">
+                                        </div>
+
+                                        <div class="form-group mt-4">
+                                            <span>Дата по</span>
+                                            <input type="date" name="" class="form-control mt-2">
+                                        </div>
+
+                                        <div class="form-group mt-4">
+                                            <span>Номер платежа или счета</span>
+                                            <input type="number" name="" class="form-control mt-2" placeholder="Номер">
+                                        </div>
+
+                                        <div class="dropdown mt-4" id="dropdown-valet">
+                                            <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                role="button" id="dropdownMenuLink-3" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Любая валюта
+                                            </button>
+                                            <ul class="dropdown-menu border rounded shadow-sm">
+
+                                                <li class="dropdown-item">
+                                                    <label for="valet-9" class="check-label">Любая валюта</label>
+                                                    <input type="radio" name="check" id="valet-9" value="0"
+                                                        class="d-none">
+                                                </li>
+
+                                                <li class="dropdown-item">
+                                                    <label for="valet-1" class="check-label">Валюта - RUB</label>
+                                                    <input type="radio" name="check" id="valet-1" value="1"
+                                                        class="d-none">
+                                                </li>
+
+                                                <li class="dropdown-item">
+                                                    <label for="valet-2" class="check-label">Валюта - USD</label>
+                                                    <input type="radio" name="check" id="valet-2" value="2"
+                                                        class="d-none">
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="form-group mt-4">
+                                            <span>Сумма от</span>
+                                            <input type="number" name="" class="form-control mt-2" placeholder="Сумма">
+                                        </div>
+
+                                        <div class="form-group mt-4">
+                                            <span>Сумма до</span>
+                                            <input type="number" name="" class="form-control mt-2" placeholder="Сумма">
+                                        </div>
+
+                                        <div class="form-group mt-4">
+                                            <span>Комментарий</span>
+                                            <input type="text" name="" class="form-control mt-2"
+                                                placeholder="Комментарий">
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary w-100 mt-4">Применить
+                                            фильтр</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ? end payments filter -->
+
+                        <!-- ? start info -->
+                        <div class="payments__info w-100 border-bottom mt-2">
+                            <ul class="payments__list w-100">
+                                <li class="payments__item">Счет</li>
+                                <li class="payments__item">Дата</li>
+                                <li class="payments__item">Тип</li>
+                                <li class="payments__item">Номер</li>
+                                <li class="payments__item">Сумма</li>
+                                <li class="payments__item">Валюта</li>
+                                <li class="payments__item">Комментарий</li>
+                            </ul>
+                        </div>
+                        <!-- ? end info -->
+
+                        <!--? start cards -->
+                        <div class="payments__cards w-100 mt-2">
+                            <!-- ? start card -->
+                            <div class="payments__card border shadow-sm rounded mt-2">
+                                <ul class="payments__list w-100">
+                                    <li class="payments__item"><span class="d-none payments__type">Счет :</span><span>My Card</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Дата :</span><span>21.04.2022</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Тип :</span><span>Внутренний исходящий</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Номер :</span><span>1488</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Сумма :</span><span>1400</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Валюта :</span><span>USD</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Комментарий :</span><span>eat</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="payments__card border shadow-sm rounded mt-2">
+                                <ul class="payments__list w-100">
+                                    <li class="payments__item"><span class="d-none payments__type">Счет :</span><span>My Card</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Дата :</span><span>21.04.2022</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Тип :</span><span>Внутренний исходящий</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Номер :</span><span>1488</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Сумма :</span><span>1400</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Валюта :</span><span>USD</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Комментарий :</span><span>eat</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="payments__card border shadow-sm rounded mt-2">
+                                <ul class="payments__list w-100">
+                                    <li class="payments__item"><span class="d-none payments__type">Счет :</span><span>My Card</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Дата :</span><span>21.04.2022</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Тип :</span><span>Внутренний исходящий</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Номер :</span><span>1488</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Сумма :</span><span>1400</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Валюта :</span><span>USD</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Комментарий :</span><span>eat</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="payments__card border shadow-sm rounded mt-2">
+                                <ul class="payments__list w-100">
+                                    <li class="payments__item"><span class="d-none payments__type">Счет :</span><span>My Card</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Дата :</span><span>21.04.2022</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Тип :</span><span>Внутренний исходящий</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Номер :</span><span>1488</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Сумма :</span><span>1400</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Валюта :</span><span>USD</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Комментарий :</span><span>eat</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="payments__card border shadow-sm rounded mt-2">
+                                <ul class="payments__list w-100">
+                                    <li class="payments__item"><span class="d-none payments__type">Счет :</span><span>My Card</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Дата :</span><span>21.04.2022</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Тип :</span><span>Внутренний исходящий</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Номер :</span><span>1488</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Сумма :</span><span>1400</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Валюта :</span><span>USD</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Комментарий :</span><span>eat</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="payments__card border shadow-sm rounded mt-2">
+                                <ul class="payments__list w-100">
+                                    <li class="payments__item"><span class="d-none payments__type">Счет :</span><span>My Card</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Дата :</span><span>21.04.2022</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Тип :</span><span>Внутренний исходящий</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Номер :</span><span>1488</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Сумма :</span><span>1400</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Валюта :</span><span>USD</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Комментарий :</span><span>eat</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="payments__card border shadow-sm rounded mt-2">
+                                <ul class="payments__list w-100">
+                                    <li class="payments__item"><span class="d-none payments__type">Счет :</span><span>My Card</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Дата :</span><span>21.04.2022</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Тип :</span><span>Внутренний исходящий</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Номер :</span><span>1488</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Сумма :</span><span>1400</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Валюта :</span><span>USD</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Комментарий :</span><span>eat</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="payments__card border shadow-sm rounded mt-2">
+                                <ul class="payments__list w-100">
+                                    <li class="payments__item"><span class="d-none payments__type">Счет :</span><span>My Card</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Дата :</span><span>21.04.2022</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Тип :</span><span>Внутренний исходящий</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Номер :</span><span>1488</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Сумма :</span><span>1400</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Валюта :</span><span>USD</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Комментарий :</span><span>eat</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="payments__card border shadow-sm rounded mt-2">
+                                <ul class="payments__list w-100">
+                                    <li class="payments__item"><span class="d-none payments__type">Счет :</span><span>My Card</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Дата :</span><span>21.04.2022</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Тип :</span><span>Внутренний исходящий</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Номер :</span><span>1488</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Сумма :</span><span>1400</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Валюта :</span><span>USD</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Комментарий :</span><span>eat</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="payments__card border shadow-sm rounded mt-2">
+                                <ul class="payments__list w-100">
+                                    <li class="payments__item"><span class="d-none payments__type">Счет :</span><span>My Card</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Дата :</span><span>21.04.2022</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Тип :</span><span>Внутренний исходящий</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Номер :</span><span>1488</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Сумма :</span><span>1400</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Валюта :</span><span>USD</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Комментарий :</span><span>eat</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="payments__card border shadow-sm rounded mt-2">
+                                <ul class="payments__list w-100">
+                                    <li class="payments__item"><span class="d-none payments__type">Счет :</span><span>My Card</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Дата :</span><span>21.04.2022</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Тип :</span><span>Внутренний исходящий</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Номер :</span><span>1488</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Сумма :</span><span>1400</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Валюта :</span><span>USD</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Комментарий :</span><span>eat</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="payments__card border shadow-sm rounded mt-2">
+                                <ul class="payments__list w-100">
+                                    <li class="payments__item"><span class="d-none payments__type">Счет :</span><span>My Card</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Дата :</span><span>21.04.2022</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Тип :</span><span>Внутренний исходящий</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Номер :</span><span>1488</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Сумма :</span><span>1400</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Валюта :</span><span>USD</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Комментарий :</span><span>eat</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="payments__card border shadow-sm rounded mt-2">
+                                <ul class="payments__list w-100">
+                                    <li class="payments__item"><span class="d-none payments__type">Счет :</span><span>My Card</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Дата :</span><span>21.04.2022</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Тип :</span><span>Внутренний исходящий</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Номер :</span><span>1488</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Сумма :</span><span>1400</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Валюта :</span><span>USD</span></li>
+                                    <li class="payments__item"><span class="d-none payments__type">Комментарий :</span><span>eat</span></li>
+                                </ul>
+                            </div>
+                            <!-- ? end card -->
+                        </div>
+                        <!--? end cards -->
+
+                    </section>
+                    <!-- payments end  -->
+
+                    <!-- start referals -->
+                    <section class="p-4 shadow-sm border rounded section referals fade" id="referals-panel" data-tab="grey">
+
+                        <!-- ? start referals header -->
+                        <form class="referals__header border-bottom d-flex align-items-center py-3">
+                            <div class="input-group d-flex align-items-center me-3">
+                                <span class="d-block me-3">Дата от</span>
+                                <input type="date" class="form-control rounded">
+                            </div>
+                            <div class="input-group d-flex align-items-center me-3">
+                                <span class="d-block me-3">Дата до</span>
+                                <input type="date" class="form-control rounded">
+                            </div>
+                            <button type="submit" class="btn btn-primary py-2 px-4">Показать</button>
+                        </form>
+                        <!-- ? end referals header -->
+
+                        <!-- ? start referals header -->
+                        <div class="referals__content mt-4">
+                            <div class="referals__cart mb-3">
+                                <div class="referals__cart-name">
+                                    <span class="fs-5">FNB GROUP</span>
+                                    <span class="mt-2">#10041</span>
+                                </div>
+                                <div class="referals__cart-info">
+                                    <div class="referals__cart-info--box">
+                                        <span>RUB</span>
+                                        <span>4,50%</span>
+                                        <span>0,43 RUB</span>
+                                    </div>
+                                    <div class="referals__cart-info--box">
+                                        <span>RUB</span>
+                                        <span>4,50%</span>
+                                        <span>0,43 RUB</span>
+                                    </div>
+                                    <div class="referals__cart-info--box">
+                                        <span>RUB</span>
+                                        <span>4,50%</span>
+                                        <span>0,43 RUB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="referals__cart mb-3">
+                                <div class="referals__cart-name">
+                                    <span class="fs-5">FNB GROUP</span>
+                                    <span class="mt-2">#10041</span>
+                                </div>
+                                <div class="referals__cart-info">
+                                    <div class="referals__cart-info--box">
+                                        <span>RUB</span>
+                                        <span>4,50%</span>
+                                        <span>0,43 RUB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="referals__cart mb-3">
+                                <div class="referals__cart-name">
+                                    <span class="fs-5">FNB GROUP</span>
+                                    <span class="mt-2">#10041</span>
+                                </div>
+                                <div class="referals__cart-info">
+                                    <div class="referals__cart-info--box">
+                                        <span>RUB</span>
+                                        <span>4,50%</span>
+                                        <span>0,43 RUB</span>
+                                    </div>
+                                    <div class="referals__cart-info--box">
+                                        <span>RUB</span>
+                                        <span>4,50%</span>
+                                        <span>0,43 RUB</span>
+                                    </div>
+                                    <div class="referals__cart-info--box">
+                                        <span>RUB</span>
+                                        <span>4,50%</span>
+                                        <span>0,43 RUB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="referals__cart mb-3">
+                                <div class="referals__cart-name">
+                                    <span class="fs-5">FNB GROUP</span>
+                                    <span class="mt-2">#10041</span>
+                                </div>
+                                <div class="referals__cart-info">
+                                    <div class="referals__cart-info--box">
+                                        <span>RUB</span>
+                                        <span>4,50%</span>
+                                        <span>0,43 RUB</span>
+                                    </div>
+                                    <div class="referals__cart-info--box">
+                                        <span>RUB</span>
+                                        <span>4,50%</span>
+                                        <span>0,43 RUB</span>
+                                    </div>
+                                    <div class="referals__cart-info--box">
+                                        <span>RUB</span>
+                                        <span>4,50%</span>
+                                        <span>0,43 RUB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="referals__cart mb-3">
+                                <div class="referals__cart-name">
+                                    <span class="fs-5">FNB GROUP</span>
+                                    <span class="mt-2">#10041</span>
+                                </div>
+                                <div class="referals__cart-info">
+                                    <div class="referals__cart-info--box">
+                                        <span>RUB</span>
+                                        <span>4,50%</span>
+                                        <span>0,43 RUB</span>
+                                    </div>
+                                    <div class="referals__cart-info--box">
+                                        <span>RUB</span>
+                                        <span>4,50%</span>
+                                        <span>0,43 RUB</span>
+                                    </div>
+                                    <div class="referals__cart-info--box">
+                                        <span>RUB</span>
+                                        <span>4,50%</span>
+                                        <span>0,43 RUB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="referals__cart mb-3">
+                                <div class="referals__cart-name">
+                                    <span class="fs-5">FNB GROUP</span>
+                                    <span class="mt-2">#10041</span>
+                                </div>
+                                <div class="referals__cart-info">
+                                    <div class="referals__cart-info--box">
+                                        <span>RUB</span>
+                                        <span>4,50%</span>
+                                        <span>0,43 RUB</span>
+                                    </div>
+                                    <div class="referals__cart-info--box">
+                                        <span>RUB</span>
+                                        <span>4,50%</span>
+                                        <span>0,43 RUB</span>
+                                    </div>
+                                    <div class="referals__cart-info--box">
+                                        <span>RUB</span>
+                                        <span>4,50%</span>
+                                        <span>0,43 RUB</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ? end referals header -->
+
+                    </section>
+                    <!-- end referals -->
+
+                    <!-- start pay -->
+                    <section class="px-4 shadow-sm border rounded section pay fade" id="pay-panel" data-tab="grey">
+                        <!-- start check tabs -->
+                        <ul class="nav nav-tabs border-bottom mt-4" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="btn btn-tab py-2 px-4 active" id="inside-tab" data-bs-toggle="tab"
+                                    data-bs-target="#inside-panel" type="button" role="tab" aria-controls="home"
+                                    aria-selected="true">Внутренний перевод</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="btn btn-tab py-2 px-4" id="card-tab" data-bs-toggle="tab"
+                                    data-bs-target="#card-panel" type="button" role="tab" aria-controls="card"
+                                    aria-selected="false">Перевод на карту</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="btn btn-tab py-2 px-4" id="service-tab" data-bs-toggle="tab"
+                                    data-bs-target="#service-panel" type="button" role="tab" aria-controls="service"
+                                    aria-selected="false">Сервис обмена</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="btn btn-tab py-2 px-4" id="create-check-tab" data-bs-toggle="tab"
+                                    data-bs-target="#create-check-panel" type="button" role="tab"
+                                    aria-controls="create-check" aria-selected="false">Создать счет</button>
+                            </li>
+                        </ul>
+                        <!-- end check tabs -->
+
+                        <!-- start check content  -->
+                        <div class="tab-content py-3" id="myTabContent">
+                            <!--? start check inside -->
+                            <form action="" method="" class="tab-pane fade show active" id="inside-panel"
+                                role="tabpanel" aria-labelledby="inside-tab">
+                                <div class="row mt-4">
+                                    <div class="col-12">
+                                        <!-- text info -->
+                                        <ul class="p-4 bg-lite border shadow-sm rounded">
+                                            <li class="">* Платежные лимиты: 1,00 - 10 000 000,00 RUB</li>
+                                            <li class="mt-3">* Комиссия: 0,00 RUB</li>
+                                            <li class="mt-3">* Валюта счета получателя должна совпадать с валютой счета
+                                                отправителя</li>
+                                        </ul>
+                                    </div>
+
+                                    <div
+                                        class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6 mt-4 d-flex flex-column justify-content-between">
+                                        <h5 class="h5 mt-3">Выберите счет откуда будет совершен перевод</h4>
+                                            <div class="pay__group mt-3">
+                                                <span>Счет</span>
+                                                <div class="dropdown ms-3" id="dropdown-check-2">
+                                                    <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                        role="button" id="dropdownMenuLink-4" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">
+                                                        Счет 1
+                                                    </button>
+                                                    <ul class="dropdown-menu border rounded shadow-sm">
+
+                                                        <li class="dropdown-item">
+                                                            <label for="check-2-1" class="check-label">Счет 1</label>
+                                                            <input type="radio" name="check-2" id="check-2-1" value="1"
+                                                                class="d-none" checked>
+                                                        </li>
+
+                                                        <li class="dropdown-item">
+                                                            <label for="check-2-2" class="check-label">Счет 2</label>
+                                                            <input type="radio" name="check-2" id="check-2-2" value="2"
+                                                                class="d-none">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="pay__group mt-3">
+                                                <span>Доступные средства</span>
+                                                <span>102.000 RUB</span>
+                                            </div>
+                                    </div>
+
+                                    <div
+                                        class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6 mt-4 d-flex flex-column justify-content-between">
+                                        <h5 class="h5 mt-3">Укажите номер счета получателя</h4>
+                                            <div class="pay__group mt-3">
+                                                <span>Номер счета</span>
+                                                <input type="number" class="form-control" placeholder="">
+                                            </div>
+                                    </div>
+
+                                    <div
+                                        class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6 mt-4 d-flex flex-column justify-content-between">
+                                        <h5 class="h5 mt-3">Назначение платежа</h5>
+                                        <textarea name="" class="form-control h-100 mt-3"></textarea>
+                                    </div>
+
+                                    <div
+                                        class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6 mt-4 d-flex flex-column justify-content-between">
+                                        <h5 class="h5 mt-3">Укажите сумму перевода</h4>
+                                            <div class="pay__group mt-3">
+                                                <span>Сумма</span>
+                                                <input type="number" class="form-control" placeholder="">
+                                            </div>
+                                            <div class="pay__group mt-3">
+                                                <span>Комиссия</span>
+                                                <span>--.--</span>
+                                            </div>
+                                            <div class="pay__group mt-3">
+                                                <span>Итого</span>
+                                                <span>--.--</span>
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary mt-5">Отправить</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!--? end check inside -->
+
+                            <!--? start check card -->
+                            <form action="" method="" class="tab-pane fade" id="card-panel" role="tabpanel"
+                                aria-labelledby="card-tab">
+                                <div class="row mt-4">
+                                    <div class="col-12">
+                                        <p>Комисии и лимиты, применимые к переводам на карты:</p>
+                                        <ul class="list list-limit rounded shadow-sm border">
+                                            <li class="border-bottom">
+                                                <span></span>
+                                                <span>Комиссия</span>
+                                                <span>Лимиты</span>
+                                            </li>
+                                            <li class="border-bottom">
+                                                <span>Visa/MasterCard</span>
+                                                <span>3,00%</span>
+                                                <span>100-100 000 RUB</span>
+                                            </li>
+                                            <li class="border-bottom">
+                                                <span>Tinkoff</span>
+                                                <span>100-100 000 RU</span>
+                                                <span>3,00%</span>
+                                            </li>
+                                            <li class="border-bottom">
+                                                <span>Зарубежная карта</span>
+                                                <span>250,0 RUB + 3%</span>
+                                                <span>100-100 000 RU</span>
+                                            </li>
+                                            <li class="border-bottom">
+                                                <span>Qiwi</span>
+                                                <span>100-100 000 RU</span>
+                                                <span>3,00%</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div
+                                        class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6 mt-4 d-flex flex-column justify-content-between">
+                                        <h5 class="h5 mt-3">Выберите счет откуда будет совершен перевод</h5>
+                                        <div class="pay__group mt-3">
+                                            <span>Счет</span>
+                                            <div class="dropdown ms-3" id="dropdown-check-3">
+                                                <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                    role="button" id="dropdownMenuLink-5" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    Счет 1
+                                                </button>
+                                                <ul class="dropdown-menu border rounded shadow-sm">
+
+                                                    <li class="dropdown-item">
+                                                        <label for="check-3-1" class="check-label">Счет 1</label>
+                                                        <input type="radio" name="check-3" id="check-3-1" value="1"
+                                                            class="d-none" checked>
+                                                    </li>
+
+                                                    <li class="dropdown-item">
+                                                        <label for="check-3-2" class="check-label">Счет 2</label>
+                                                        <input type="radio" name="check-3" id="check-3-2" value="2"
+                                                            class="d-none">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="pay__group mt-3">
+                                            <span>Доступные средства</span>
+                                            <span>102.000 RUB</span>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6 mt-4 d-flex flex-column justify-content-between">
+                                        <h5 class="h5 mt-3">Укажите номер счета получателя</h5>
+                                        <div class="pay__group mt-3">
+                                            <span>Номер счета</span>
+                                            <input type="number" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6 mt-4 d-flex flex-column justify-content-between">
+                                        <h5 class="h5 mt-3">Назначение платежа</h5>
+                                        <textarea name="" class="form-control h-100 mt-3"></textarea>
+                                    </div>
+
+                                    <div
+                                        class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6 mt-4 d-flex flex-column justify-content-between">
+                                        <h5 class="h5 mt-3">Укажите сумму перевода</h4>
+                                            <div class="pay__group mt-3">
+                                                <span>Сумма</span>
+                                                <input type="number" class="form-control" placeholder="">
+                                            </div>
+                                            <div class="pay__group mt-3">
+                                                <span>Комиссия</span>
+                                                <span>--.--</span>
+                                            </div>
+                                            <div class="pay__group mt-3">
+                                                <span>Итого</span>
+                                                <span>--.--</span>
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary mt-5">Отправить</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!--? end check card -->
+
+                            <!--? start check service -->
+                            <form action="" method="" class="tab-pane fade" id="service-panel" role="tabpanel"
+                                aria-labelledby="service-tab">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p class="info-p shadow-sm border rounded bg-lite">
+                                            Сервисы обмена RUB, USD, EUR, на BTC или USDT
+                                            Предоставлен нашим партнером FlashCash Exchange.
+                                            <br>
+                                            Условия предоставления услуги:
+                                            <br>
+                                            Курс фиксируется в момент сделки и не меняетсяю. <br>
+                                            USDT или BTC будут отправлены на указанный вами адрес. <br>
+                                            Наша комиссия составит 3.00% сверх суммы сделки. <br>
+                                            Минимальная сумма сделки 40 000,00₽/500,00$/400€.
+                                            <br>
+                                            Заявки обрабатываются вручную.
+                                            Время работы с 09:00 до 21:00 в будние дни.
+                                            <br>
+                                            Цена BTC сейчас - <span>3389497,83₽.</span> <br>
+                                            Цена USDT сейчас - <span>84,2283₽/0,961058€.</span> <br>
+                                        </p>
+                                    </div>
+
+                                    <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                                        <h5 class="h5 mt-3">Выберите счет списания</h5>
+                                        <div class="pay__group mt-3">
+                                            <span>Счет</span>
+                                            <div class="dropdown ms-3" id="dropdown-check-4">
+                                                <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                    role="button" id="dropdownMenuLink-6" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    Счет 1
+                                                </button>
+                                                <ul class="dropdown-menu border rounded shadow-sm">
+
+                                                    <li class="dropdown-item">
+                                                        <label for="check-4-1" class="check-label">Счет 1</label>
+                                                        <input type="radio" name="check-4" id="check-4-1" value="1"
+                                                            class="d-none" checked>
+                                                    </li>
+
+                                                    <li class="dropdown-item">
+                                                        <label for="check-4-2" class="check-label">Счет 2</label>
+                                                        <input type="radio" name="check-4" id="check-4-2" value="2"
+                                                            class="d-none">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="pay__group mt-3">
+                                            <span>Доступные средства</span>
+                                            <span>102.000 RUB</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                                        <h5 class="h5 mt-3">Crypto кошелек</h5>
+                                        <div class="pay__group mt-3">
+                                            <span>Кошелек</span>
+                                            <div class="dropdown ms-3" id="crypto">
+                                                <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                    role="button" id="dropdownMenuLin-7" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    BTC
+                                                </button>
+                                                <ul class="dropdown-menu border rounded shadow-sm">
+
+                                                    <li class="dropdown-item">
+                                                        <label for="crypto-1" class="check-label">BTC</label>
+                                                        <input type="radio" name="crypto-1" id="crypto-1" value="1"
+                                                            class="d-none" checked>
+                                                    </li>
+
+                                                    <li class="dropdown-item">
+                                                        <label for="crypto-2" class="check-label">USDT</label>
+                                                        <input type="radio" name="crypto-1" id="crypto-2" value="2"
+                                                            class="d-none">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="pay__group mt-3">
+                                            <span>Адрес кошелька</span>
+                                            <input type="text" name="" class="form-control">
+                                        </div>
+                                        <div class="pay__group mt-3">
+                                            <span>Сумма к получению</span>
+                                            <input type="number" name="" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                                        <h5 class="h5">Укажите сумму обмена</h5>
+                                        <div class="pay__group mt-3">
+                                            <span>Сумма</span>
+                                            <input type="number" name="" class="form-control">
+                                        </div>
+                                        <div class="pay__group mt-3">
+                                            <span>Комиссия</span>
+                                            <span>--.--</span>
+                                        </div>
+                                        <div class="pay__group mt-3">
+                                            <span>Итого</span>
+                                            <span>--.--</span>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6 d-flex flex-column justify-content-end">
+                                        <button type="submit" class="btn btn-primary">Обменять</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!--? end check service -->
+
+                            <!--? start check create -->
+                            <form action="" method="" class="tab-pane fade" id="create-check-panel" role="tabpanel"
+                                aria-labelledby="create-check-tab">
+                                <div class="row">
+                                    <h4 class="h4 mt-3">Создать счет</h4>
+                                    <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6 mt-4">
+                                        <div class="pay__group mt-3">
+                                            <span>Номер счета</span>
+                                            <div class="dropdown ms-3" id="dropdown-check-5">
+                                                <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                    role="button" id="dropdownMenuLink-8" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    Счет 1
+                                                </button>
+                                                <ul class="dropdown-menu border rounded shadow-sm">
+
+                                                    <li class="dropdown-item">
+                                                        <label for="check-5-1" class="check-label">Счет 1</label>
+                                                        <input type="radio" name="check-5" id="check-5-1" value="1"
+                                                            class="d-none" checked>
+                                                    </li>
+
+                                                    <li class="dropdown-item">
+                                                        <label for="check-5-2" class="check-label">Счет 2</label>
+                                                        <input type="radio" name="check-5" id="check-5-2" value="2"
+                                                            class="d-none">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="pay__group mt-2">
+                                            <span>Номер заказа</span>
+                                            <input type="text" name="" class="form-control">
+                                        </div>
+                                        <div class="pay__group mt-2">
+                                            <span>Сумма</span>
+                                            <input type="text" name="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6 mt-4">
+                                        <span>Описание</span>
+                                        <textarea name="" class="form-control text-area mt-3"></textarea>
+                                    </div>
+                                    <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6 mt-4">
+                                        <h5 class="h5 mt-4">Реквизиты плательщика</h5>
+                                        <div class="pay__group mt-3">
+                                            <span>Телефон</span>
+                                            <input type="tel" name="" class="form-control mt-3"
+                                                placeholder="+7 000 000 00 00">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6 mt-4">
+                                        <h5 class="h5 mt-4">Настройки счета</h5>
+                                        <div class="pay__group mt-3">
+                                            <span>Время на оплату, мин</span>
+                                            <input type="time" name="" class="form-control mt-3" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-5">
+                                        <button type="submit" class="btn btn-primary w-100">Создать инвойс</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!--? end check create -->
+                        </div>
+                        <!-- end check content  -->
+                    </section>
+                    <!-- end pay -->
+
+                    <!-- start profil -->
+                    <section class="px-4 py-5 shadow-sm border rounded section profil fade" id="profil-panel" data-tab="orange">
+                        <div class="profil__box">
+                            <ul class="profil__list">
+                                <li class="profil__item">
+                                    <span>Никнейм</span>
+                                    <span>Alex</span>
+                                </li>
+
+                                <li class="profil__item">
+                                    <span>Поачта</span>
+                                    <span>Alex@example.com</span>
+                                </li>
+
+                                <li class="profil__item">
+                                    <span>Подписан на рассылку</span>
+                                    <label for="mailing-chb" class="switch" id="mailing-label">
+                                        <input type="checkbox" id="mailing-chb" name="mailing" class="d-none">
+                                    </label>
+                                </li>
+
+                                <li class="profil__item">
+                                    <span>Включить дополнительную защиту (2FA Защита)</span>
+                                    <label for="chb-2fa" class="switch" id="label-2fa">
+                                        <input type="checkbox" id="chb-2fa" name="2FA" class="d-none">
+                                    </label>
+                                </li>
+
+                                <li class="profil__item">
+                                    <button type="button" class="btn btn-primary w-100" id="profil-pass">Изменить
+                                        пароль</button>
+                                </li>
+                            </ul>
+
+                            <form action="" method="" id="profil-form">
+                                <div class="d-flex flex-column mt-3">
+                                    <span class="mb-2">Старый пароль</span>
+                                    <input type="password" name="" class="form-control" placeholder="Пароль">
+                                </div>
+
+                                <div class="d-flex flex-column mt-3">
+                                    <span class="mb-2">Новый пароль</span>
+                                    <input type="password" name="" class="form-control" placeholder="Пароль">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary w-100 mt-4">Сохранить изменения</button>
+                            </form>
+                        </div>
+                    </section>
+                    <!-- end profil -->
+
+                    <!-- start statistics -->
+                    <section class="px-4 py-5 shadow-sm border rounded section statistics fade" id="statistics-panel" data-tab="green">
+                        <div class="w-100 py-2 border-bottom statistics__header">
+                            <h4 class="h4">Статистика</h4>
+                        </div>
+                    </section>
+                    <!-- end statistics -->
+
+                    <!-- <section class="px-4 py-5 shadow-sm border rounded section"></section>
+                    <section class="px-4 py-5 shadow-sm border rounded section"></section>
+                    <section class="px-4 py-5 shadow-sm border rounded section"></section> -->
+                </div>
+                <!-- content end -->
+            </div>
+        </div>
+    </div>
+    <!-- ? scripts -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="js/$.js"></script>
+</body>
+
+</html>
